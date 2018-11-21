@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Web Designer Studio</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="script.js"></script>
+		<meta charset="UTF-8">
+		<meta name="google" content="notranslate">
+		<meta http-equiv="Content-Language" content="en">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />		
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+    <body>
+    	<div class="container">
+			<h1>Web Designer Studio</h1>
+			<table id="cmds" border=1>
+				<tr>
+			        <th>Command</th>
+			        <th>Description</th>
+			        <th>Action</th>
+			    </tr>
+			    <tr>
+			        <td>Open</td>
+			        <td>Open the design window</td>
+			        <td><button onclick="openWin()">Open</button></td>
+			    </tr>	
+			    <tr>
+			        <td>Close</td>
+			        <td>Close the design window</td>
+			        <td><button onclick="closeWindow()">Close</button></td>
+			    </tr>
+			    <tr>
+			        <td>Clear</td>
+			        <td>Clear the design window</td>
+			        <td><button onclick="clearWindow()">Clear</button></td>
+			    </tr>			
+			</table>
+			<table border=1>
+			    <tr>
+			        <th>Item</th>
+			        <th>Description</th>
+			        <th>Action</th>
+			    </tr>
+			    <tr>
+			        <td>Button</td>
+			        <td>Add a button to the design window</td>
+			        <td>
+				        <input type="text" value="Button text" id="btn">
+			        	<button onclick="addButton()">Add</button>
+		        	</td>
+			    </tr>
+	    		<tr>
+			    	<td>Body Background Color</td>
+			    	<td>Add a body background hex-color to the design window.</td>
+			    	<td>
+			    		<input type="text" value="#ffffff" id="bg">
+			    		<button onclick="addBodyBackgroundColor()">Add</button>
+		    		</td>
+		    	</tr>
+	    		<tr>
+			    	<td>Paragraph Color</td>
+			    	<td>Add a paragraph text hex-color to the design window.</td>
+			    	<td>
+			    		<input type="text" value="#000000" id="paragraphColor">
+			    		<button onclick="addParagraphColor()">Add</button>
+		    		</td>
+		    	</tr>
+	    		<tr>
+			    	<td>Paragraph Size</td>
+			    	<td>Add a paragraph text size to the design window.</td>
+			    	<td>
+			    		<input type="text" value="12px" id="paragraphSize">
+			    		<button onclick="addParagraphSize()">Add</button>
+		    		</td>
+		    	</tr>
+	    		<tr>
+			    	<td>Paragraph</td>
+			    	<td>Add a paragraph to the design window.</td>
+			    	<td>
+			    		<input type="text" value="Lorem epsum" id="paragraph">
+			    		<button onclick="addParagraph()">Add</button>
+		    		</td>
+		    	</tr>
+		    		    		<tr>
+			    	<td>H1</td>
+			    	<td>Add a header 1 to the design window</td>
+			    	<td>
+			    		<input type="text" value="Header text" id="h1">
+			    		<button onclick="addHeader(1)">Add</button>
+		    		</td>
+	    		</tr>
+	    		<tr>
+			    	<td>H1 Color</td>
+			    	<td>Add a header 1 hex-color to the design window.</td>
+			    	<td>
+			    		<input type="text" value="#000000" id="headerColor1">
+			    		<button onclick="addHeaderColor(1)">Add</button>
+		    		</td>
+		    	</tr>
+	    		<tr>
+			    	<td>H2</td>
+			    	<td>Add a header 2 to the design window</td>
+			    	<td>
+			    		<input type="text" value="Header text" id="h2">
+			    		<button onclick="addHeader(2)">Add</button>
+		    		</td>
+	    		</tr>
+	    		<tr>
+			    	<td>H2 Color</td>
+			    	<td>Add a header 2 hex-color to the design window.</td>
+			    	<td>
+			    		<input type="text" value="#000000" id="headerColor2">
+			    		<button onclick="addHeaderColor(2)">Add</button>
+		    		</td>
+		    	</tr>
+	    		<tr>
+			    	<td>H3</td>
+			    	<td>Add a header 3 to the design window</td>
+			    	<td>
+			    		<input type="text" value="Header text" id="h3">
+			    		<button onclick="addHeader(3)">Add</button>
+		    		</td>
+	    		</tr>
+	      		<tr>
+			    	<td>H3 Color</td>
+			    	<td>Add a header 3 hex-color to the design window.</td>
+			    	<td>
+			    		<input type="text" value="#000000" id="headerColor3">
+			    		<button onclick="addHeaderColor(3)">Add</button>
+		    		</td>
+		    	</tr>
+	    		<tr>
+			    	<td>H4</td>
+			    	<td>Add a header 4 to the design window</td>
+			    	<td>
+			    		<input type="text" value="Header text"id="h4">
+			    		<button onclick="addHeader(4)">Add</button>
+		    		</td>
+	    		</tr>
+	    		<tr>
+			    	<td>H4 Color</td>
+			    	<td>Add a header 4 hex-color to the design window.</td>
+			    	<td>
+			    		<input type="text" value="#000000" id="headerColor4">
+			    		<button onclick="addHeaderColor(4)">Add</button>
+		    		</td>
+		    	</tr>
+	    		<tr>
+			    	<td>H5</td>
+			    	<td>Add a header 5 to the design window</td>
+			    	<td>
+			    		<input type="text" value="Header text" id="h5">
+			    		<button onclick="addHeader(5)">Add</button>
+		    		</td>
+		    	</tr>
+	    		<tr>
+			    	<td>H5 Color</td>
+			    	<td>Add a header 5 hex-color to the design window.</td>
+			    	<td>
+			    		<input type="text" value="#000000" id="headerColor5">
+			    		<button onclick="addHeaderColor(5)">Add</button>
+		    		</td>
+		    	</tr>
+	    		<tr>
+			    	<td>H6</td>
+			    	<td>Add a header 6 to the design window</td>
+			    	<td>
+			    		<input type="text" value="Header text" id="h6">
+			    		<button onclick="addHeader(6)">Add</button>
+		    		</td>
+		    	</tr>
+	    		<tr>
+			    	<td>H5 Color</td>
+			    	<td>Add a header 6 hex-color to the design window.</td>
+			    	<td>
+			    		<input type="text" value="#000000" id="headerColor6">
+			    		<button onclick="addHeaderColor(6)">Add</button>
+		    		</td>
+		    	</tr>
+	    		<tr>
+			    	<td>Image</td>
+			    	<td>Add an image to the design window.</td>
+			    	<td>
+			    		<input type="text" value="Image url" id="img">
+			    		<button onclick="addImage()">Add</button>
+		    		</td>
+		    	</tr>
+		    	<tr>
+		    		<td>Make alert button</td>
+		    		<td>Add a javascript button that alerts the user when clicked.</td>
+		    		<td>
+		    			<input type="text" value="Button text" id="alertbtn">
+		    			<input type="text" value="Alert text" id="alert">
+		    			<button onclick="addAlert()">Add</button>
+	    			</td>
+    			</tr>
+    			<tr>
+		    		<td>Add link</td>
+		    		<td>Add a link that can be clicked on.</td>
+		    		<td>
+		    			<input type="text" value="http://url.com" id="linkurl">
+		    			<input type="text" value="Link text" id="linktext">
+		    			<button onclick="addLink()">Add</button>
+	    			</td>
+    			</tr>
+			</table>
+
+			<h2>Features</h2>
+
+	        <table border="1">
+	            <tr>
+	                <th>HTML</th>
+	                <th>CSS</th>
+	                <th>JavaScript</th>
+	                <th>XML</th>
+	                <th>Others</th>
+	            </tr>
+	            <tr>
+	                <td>Button</td>
+	                <td>Body Background Color</td>
+	                <td>Alert Button</td>
+	                <td>None</td>
+	                <td>None</td>
+                </tr>
+	            <tr>
+	                <td>Add H1</td>
+	                <td>H1 Color</td>
+	                <td>None</td>
+	                <td>None</td>
+	                <td>None</td>
+                </tr>
+ 	            <tr>
+	                <td>Add H2</td>
+	                <td>H2 Color</td>
+	                <td>None</td>
+	                <td>None</td>
+	                <td>None</td>
+                </tr>
+ 	            <tr>
+	                <td>Add H3</td>
+	                <td>H3 Color</td>
+	                <td>None</td>
+	                <td>None</td>
+	                <td>None</td>
+                </tr>
+ 	            <tr>
+	                <td>Add H4</td>
+	                <td>H4 Color</td>
+	                <td>None</td>
+	                <td>None</td>
+	                <td>None</td>
+                </tr>
+ 	            <tr>
+	                <td>Add H5</td>
+	                <td>H5 Color</td>
+	                <td>None</td>
+	                <td>None</td>
+	                <td>None</td>
+                </tr>
+ 	            <tr>
+	                <td>Add H6</td>
+	                <td>H6 Color</td>
+	                <td>None</td>
+	                <td>None</td>
+	                <td>None</td>
+                </tr>
+ 	            <tr>
+	                <td>Add Paragraph</td>
+	                <td>Paragraph Color</td>
+	                <td>None</td>
+	                <td>None</td>
+	                <td>None</td>
+                </tr>
+ 	            <tr>
+	                <td>Add Image</td>
+	                <td>Paragraph Size</td>
+	                <td>None</td>
+	                <td>None</td>
+	                <td>None</td>
+                </tr>
+ 	            <tr>
+	                <td>Add Link</td>
+	                <td>None0</td>
+	                <td>None</td>
+	                <td>None</td>
+	                <td>None</td>
+                </tr>
+	        </table>
+		</body>
+	</div>
+</html>
